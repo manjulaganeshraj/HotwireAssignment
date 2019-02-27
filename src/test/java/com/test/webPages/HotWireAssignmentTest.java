@@ -64,7 +64,9 @@ public class HotWireAssignmentTest extends TestBase {
 		homePage.submitBundleSearch(); 
 
 		ResultsPage resultPage = new ResultsPage(driver);
-				
+			
+		resultPage.ensureLoad();
+
 		//Verify that there is at least one result returned
 		assertTrue(resultPage.extractResults().size() > 0); 
 		//System.out.println(resultPage.extractResults().size());
